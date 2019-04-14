@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg1"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.vmac.WatBot.MainActivity"
+    tools:showIn="@layout/activity_main">
+    <!--A flexible view for providing a limited window into a large data set/list itemn-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:scrollbars="vertical"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <!--Background gradient image-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/backgroung_gradient"
+        android:orientation="horizontal"
+        android:weightSum="4">
+        <!--A ImageButton which supports compatible features on older versions of the platform,-->
+        <!--voice  button-->
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/btn_record"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@null"
+            android:elevation="0dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/mic" />
+
+<!--Text field-->
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="3"
+            android:background="@null"
+            android:hint="@string/what_s_on_your_mind"
+            android:lines="2"
+            android:paddingLeft="8dp" />
+
+        <!--<Button android:id="@+id/btn_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="ASK"
+            android:textSize="16dp"
+            android:textColor="@color/colorPrimary" />-->
+        <!--Text Send button-->
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/btn_send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:elevation="0dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/send" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
